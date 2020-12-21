@@ -1,0 +1,642 @@
+{
+    "arch": {
+        "arch": "x86"
+    },
+    "regs": {
+        "eax": 1451176552,
+        "ebx": 1451126784,
+        "ecx": 1451505444,
+        "edx": 18446744073709551615,
+        "esp": 4294954592,
+        "ebp": 1451366048,
+        "esi": 1451390800,
+        "edi": 1024,
+        "eip": 1449298295,
+        "eflags": 646,
+        "cs": 35,
+        "ss": 43,
+        "ds": 43,
+        "es": 43,
+        "fs": 0,
+        "gs": 99
+    },
+    "regs_extended": null,
+    "segments": [
+        {
+            "start": 1448431616,
+            "end": 1448513536,
+            "name": "/home/synrom/lego/git/nginx/objs/nginx",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "f464b4363ce0a0cf1472697fbdd885ba.bin"
+        },
+        {
+            "start": 1448513536,
+            "end": 1450893312,
+            "name": "/home/synrom/lego/git/nginx/objs/nginx",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": true
+            },
+            "content_file": "8e5779690add5c120a454fefc7977b99.bin"
+        },
+        {
+            "start": 1450893312,
+            "end": 1451118592,
+            "name": "/home/synrom/lego/git/nginx/objs/nginx",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "a60cd1bb6a5d29b79421a1857571308c.bin"
+        },
+        {
+            "start": 1451122688,
+            "end": 1451126784,
+            "name": "/home/synrom/lego/git/nginx/objs/nginx",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "fc6c93704c548459034d8c059d9ff60f.bin"
+        },
+        {
+            "start": 1451126784,
+            "end": 1451167744,
+            "name": "/home/synrom/lego/git/nginx/objs/nginx",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "49663c96d2128015ce3f5774843b9fd1.bin"
+        },
+        {
+            "start": 1451167744,
+            "end": 1451417600,
+            "name": "[heap]",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "3fe847d874344fae3f3b2fb28db29758.bin"
+        },
+        {
+            "start": 1451417600,
+            "end": 1451638784,
+            "name": "[heap]",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "d3ee9a5b78a83258c8d3a75771f2e4d9.bin"
+        },
+        {
+            "start": 4157636608,
+            "end": 4157644800,
+            "name": "/usr/lib/i386-linux-gnu/libnss_files-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "d2bc10732fda0fb0f7d1928df31facc8.bin"
+        },
+        {
+            "start": 4157644800,
+            "end": 4157673472,
+            "name": "/usr/lib/i386-linux-gnu/libnss_files-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": true
+            },
+            "content_file": "9e434e0bc8c931fa34114a98c5f32632.bin"
+        },
+        {
+            "start": 4157673472,
+            "end": 4157685760,
+            "name": "/usr/lib/i386-linux-gnu/libnss_files-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "1ec306019f250bd9aae5b8670273c1bf.bin"
+        },
+        {
+            "start": 4157685760,
+            "end": 4157689856,
+            "name": "/usr/lib/i386-linux-gnu/libnss_files-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "c9eda5596ee8d1260bf799f7042e0805.bin"
+        },
+        {
+            "start": 4157689856,
+            "end": 4157693952,
+            "name": "/usr/lib/i386-linux-gnu/libnss_files-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "1166a071db5934c82f6f4224272147bf.bin"
+        },
+        {
+            "start": 4157693952,
+            "end": 4157726720,
+            "name": "",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "49cc57e52af80d7ebfdeeecb284f25c3.bin"
+        },
+        {
+            "start": 4157726720,
+            "end": 4157845504,
+            "name": "/usr/lib/i386-linux-gnu/libc-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "c9051e68b7fbe777d6dcdce09226c84a.bin"
+        },
+        {
+            "start": 4157845504,
+            "end": 4159242240,
+            "name": "/usr/lib/i386-linux-gnu/libc-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": true
+            },
+            "content_file": "62d2beb98909f7ddf969cd1a1af82003.bin"
+        },
+        {
+            "start": 4159242240,
+            "end": 4159700992,
+            "name": "/usr/lib/i386-linux-gnu/libc-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "08fd3dc4e1a26723aaed4bb0124a1e96.bin"
+        },
+        {
+            "start": 4159700992,
+            "end": 4159705088,
+            "name": "/usr/lib/i386-linux-gnu/libc-2.31.so",
+            "permissions": {
+                "r": false,
+                "w": false,
+                "x": false
+            },
+            "content_file": ""
+        },
+        {
+            "start": 4159705088,
+            "end": 4159713280,
+            "name": "/usr/lib/i386-linux-gnu/libc-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "bdac77348ddc6d3cce8d414a9f7e3e2f.bin"
+        },
+        {
+            "start": 4159713280,
+            "end": 4159721472,
+            "name": "/usr/lib/i386-linux-gnu/libc-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "c33a0d87c693ff25660c08c3b31fee6c.bin"
+        },
+        {
+            "start": 4159721472,
+            "end": 4159729664,
+            "name": "",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "9ac0c5ad80218912a9023f4bbdceddeb.bin"
+        },
+        {
+            "start": 4159729664,
+            "end": 4159737856,
+            "name": "/usr/lib32/libz.so.1.2.11",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "53ee0eaafd0332a77023be8333527ff5.bin"
+        },
+        {
+            "start": 4159737856,
+            "end": 4159807488,
+            "name": "/usr/lib32/libz.so.1.2.11",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": true
+            },
+            "content_file": "a1d23e834d607f9c1d08e0c5965f8004.bin"
+        },
+        {
+            "start": 4159807488,
+            "end": 4159840256,
+            "name": "/usr/lib32/libz.so.1.2.11",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "1fad5ff4acd1d70e600f039b06618639.bin"
+        },
+        {
+            "start": 4159840256,
+            "end": 4159844352,
+            "name": "/usr/lib32/libz.so.1.2.11",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "9f5cf3f5c9f5b3b9037c2e07c70faef5.bin"
+        },
+        {
+            "start": 4159844352,
+            "end": 4159848448,
+            "name": "/usr/lib32/libz.so.1.2.11",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "a2f2a06511417f73dd6b32fc7844ecff.bin"
+        },
+        {
+            "start": 4159848448,
+            "end": 4159852544,
+            "name": "/home/synrom/lego/git/nginx/pcre/lib/libpcre.so.1.2.12",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "a55a3a6c9e8d473b65f1bb8cc213e03b.bin"
+        },
+        {
+            "start": 4159852544,
+            "end": 4159950848,
+            "name": "/home/synrom/lego/git/nginx/pcre/lib/libpcre.so.1.2.12",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": true
+            },
+            "content_file": "250303212b41806435dc79714ce6b212.bin"
+        },
+        {
+            "start": 4159950848,
+            "end": 4159975424,
+            "name": "/home/synrom/lego/git/nginx/pcre/lib/libpcre.so.1.2.12",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "df8908672115cdaa134caddf6037419a.bin"
+        },
+        {
+            "start": 4159975424,
+            "end": 4159979520,
+            "name": "/home/synrom/lego/git/nginx/pcre/lib/libpcre.so.1.2.12",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "1d51322921f77622e16faa5fc48b557d.bin"
+        },
+        {
+            "start": 4159979520,
+            "end": 4159983616,
+            "name": "/home/synrom/lego/git/nginx/pcre/lib/libpcre.so.1.2.12",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "7b9d7d09ba60910ea3e179515f478495.bin"
+        },
+        {
+            "start": 4159983616,
+            "end": 4159987712,
+            "name": "/usr/lib/i386-linux-gnu/libcrypt.so.1.1.0",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "008fdb5b54ee118d1cbe22062351def9.bin"
+        },
+        {
+            "start": 4159987712,
+            "end": 4160094208,
+            "name": "/usr/lib/i386-linux-gnu/libcrypt.so.1.1.0",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": true
+            },
+            "content_file": "2459fea5508277882c25f0e93267b5dc.bin"
+        },
+        {
+            "start": 4160094208,
+            "end": 4160208896,
+            "name": "/usr/lib/i386-linux-gnu/libcrypt.so.1.1.0",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "1eaf3ea9d655e99cb934a6bf685d6ea9.bin"
+        },
+        {
+            "start": 4160208896,
+            "end": 4160212992,
+            "name": "/usr/lib/i386-linux-gnu/libcrypt.so.1.1.0",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "4cf80fa72503ae4b62adf3649faa132b.bin"
+        },
+        {
+            "start": 4160212992,
+            "end": 4160217088,
+            "name": "/usr/lib/i386-linux-gnu/libcrypt.so.1.1.0",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "50f031340e4184dae1873dee33a4ab29.bin"
+        },
+        {
+            "start": 4160217088,
+            "end": 4160249856,
+            "name": "",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "51af76ce1e3ba861603b999373eaa5e8.bin"
+        },
+        {
+            "start": 4160249856,
+            "end": 4160274432,
+            "name": "/usr/lib/i386-linux-gnu/libpthread-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "6131c8b5b40027421d5ae618b0a43922.bin"
+        },
+        {
+            "start": 4160274432,
+            "end": 4160344064,
+            "name": "/usr/lib/i386-linux-gnu/libpthread-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": true
+            },
+            "content_file": "7e34f44410389a91e10c99a93181fb45.bin"
+        },
+        {
+            "start": 4160344064,
+            "end": 4160372736,
+            "name": "/usr/lib/i386-linux-gnu/libpthread-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "3fe36a188ced32f3b8f8b35cfa49e300.bin"
+        },
+        {
+            "start": 4160372736,
+            "end": 4160376832,
+            "name": "/usr/lib/i386-linux-gnu/libpthread-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "d143fd327319a7e03d610f4e78f5af22.bin"
+        },
+        {
+            "start": 4160376832,
+            "end": 4160380928,
+            "name": "/usr/lib/i386-linux-gnu/libpthread-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "a4683dd5f76b150f471b4e1e56714eca.bin"
+        },
+        {
+            "start": 4160380928,
+            "end": 4160389120,
+            "name": "",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "aea5d821139db82ebcb892deb9a79cfa.bin"
+        },
+        {
+            "start": 4160389120,
+            "end": 4160393216,
+            "name": "/usr/lib/i386-linux-gnu/libdl-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "841d6923eebf92403439f3ada46ae95a.bin"
+        },
+        {
+            "start": 4160393216,
+            "end": 4160401408,
+            "name": "/usr/lib/i386-linux-gnu/libdl-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": true
+            },
+            "content_file": "13b8bb5b99aad27c96473501d20ecf90.bin"
+        },
+        {
+            "start": 4160401408,
+            "end": 4160405504,
+            "name": "/usr/lib/i386-linux-gnu/libdl-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "2f1dc5f145ee43342d6291f58becbadf.bin"
+        },
+        {
+            "start": 4160405504,
+            "end": 4160409600,
+            "name": "/usr/lib/i386-linux-gnu/libdl-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "efb4c917ba74f6b1ea7c58aaa2d7f682.bin"
+        },
+        {
+            "start": 4160409600,
+            "end": 4160413696,
+            "name": "/usr/lib/i386-linux-gnu/libdl-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "c95010431741b03f769c64229ec6023c.bin"
+        },
+        {
+            "start": 4160532480,
+            "end": 4160540672,
+            "name": "",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "3537c767200aa899dcdf4e879dc1ce62.bin"
+        },
+        {
+            "start": 4160540672,
+            "end": 4160557056,
+            "name": "[vvar]",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": ""
+        },
+        {
+            "start": 4160557056,
+            "end": 4160565248,
+            "name": "[vdso]",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": true
+            },
+            "content_file": "73fccc52579141c9f916eaff997ab63a.bin"
+        },
+        {
+            "start": 4160565248,
+            "end": 4160569344,
+            "name": "/usr/lib/i386-linux-gnu/ld-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "48611f3fff03c2af3239b5c65ae51a90.bin"
+        },
+        {
+            "start": 4160569344,
+            "end": 4160688128,
+            "name": "/usr/lib/i386-linux-gnu/ld-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": true
+            },
+            "content_file": "847ba13878f1303a9437de2f412dce7d.bin"
+        },
+        {
+            "start": 4160688128,
+            "end": 4160733184,
+            "name": "/usr/lib/i386-linux-gnu/ld-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "70b59e0dd18d5f2c6e3d0251b39e677f.bin"
+        },
+        {
+            "start": 4160733184,
+            "end": 4160737280,
+            "name": "/usr/lib/i386-linux-gnu/ld-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": false,
+                "x": false
+            },
+            "content_file": "2a42ba41008ca69d8b6872a2bf0b47ed.bin"
+        },
+        {
+            "start": 4160737280,
+            "end": 4160741376,
+            "name": "/usr/lib/i386-linux-gnu/ld-2.31.so",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "e62f649b366c528e3ce68613532d0fad.bin"
+        },
+        {
+            "start": 4294823936,
+            "end": 4294959104,
+            "name": "[stack]",
+            "permissions": {
+                "r": true,
+                "w": true,
+                "x": false
+            },
+            "content_file": "32af4dd45158f1452faff83aa5855e91.bin"
+        }
+    ]
+}
