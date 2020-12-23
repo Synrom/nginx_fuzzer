@@ -294,10 +294,11 @@ class AflUnicornEngine(Uc):
     #---- Loader Helper Functions
 
     def __load_registers(self, regs, reg_map, debug_print):
-        for register, value in regs.iteritems():
+        for register in regs:
+            value = regs[register]
             if debug_print:
                 print("Reg {0} = {1}".format(register, value))
-            if not reg_map.has_key(register.lower()):
+            if register.lower() not in reg_map:
                 if debug_print:
                     print("Skipping Reg: {}".format(register))
             else:
@@ -404,7 +405,7 @@ class AflUnicornEngine(Uc):
             else:
                 if debug_print:
                     print("No content found for segment {0} @ {1:016x}".format(name, seg_start))
-                self.mem_write(seg_start, '\x00' * (seg_end - seg_start))
+                self.mem_write(seg_start, b'\x00' * (seg_end - seg_start))
 
     def __get_arch_and_mode(self, arch_str):
         arch_map = {
