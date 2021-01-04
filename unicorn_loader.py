@@ -93,7 +93,7 @@ class UnicornSimpleHeap(object):
         total_chunk_size = UNICORN_PAGE_SIZE + ALIGN_PAGE_UP(size) + UNICORN_PAGE_SIZE
         # Gross but efficient way to find space for the chunk:
         chunk = None
-        for addr in xrange(self.HEAP_MIN_ADDR, self.HEAP_MAX_ADDR, UNICORN_PAGE_SIZE):
+        for addr in range(self.HEAP_MIN_ADDR, self.HEAP_MAX_ADDR, UNICORN_PAGE_SIZE):
             try:
                 self._uc.mem_map(addr, total_chunk_size, UC_PROT_READ | UC_PROT_WRITE)
                 chunk = self.HeapChunk(addr, total_chunk_size, size)
