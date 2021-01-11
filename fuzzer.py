@@ -29,11 +29,6 @@ returns = {}
 uc = unicorn_loader.AflUnicornEngine("MemoryDump",debug_print=False)
 uc_heap = unicorn_loader.UnicornSimpleHeap(uc, debug_print=True)
 
-def hook_syscall(uc,user_data):
-    eax = uc.reg_read(UC_X86_REG_EAX)
-    print("syscall")
-    print("eax = "+hex(eax))
-    exit(0)
 
 def hook_mem_read_invalid(uc,access,address,size,value,user_data):
     uc.dump_regs()
@@ -88,6 +83,18 @@ def hook_instruction(uc,address,size,user_data):
         uc.reg_write(UC_X86_REG_EAX,iovcnt*datalen)
         uc.reg_write(UC_X86_REG_EIP,struct.unpack("<I",uc.mem_read(esp,4))[0])
         uc.reg_write(UC_X86_REG_ESP,esp+4)
+    elif address == SHUTDOWN:
+        esp = uc.reg_read(UC_X86_REG_ESP)
+        print("shutdown "+str(struct.unpack("<I",uc.mem_read(esp + 4,4))[0]))
+        uc.reg_write(UC_X86_REG_EIP,struct.unpack("<I",uc.mem_read(esp,4))[0])
+        uc.reg_write(UC_X86_REG_ESP,esp+4)
+    elif address == EPOLL_WAIT:
+        esp = uc.reg_read(UC_X86_REG_ESP)
+        print("wait on "+str(struct.unpack("<I",uc.mem_read(esp + 4,4))[0]))
+        uc.reg_write(UC_X86_REG_EIP,struct.unpack("<I",uc.mem_read(esp,4))[0])
+        uc.reg_write(UC_X86_REG_ESP,esp+4)
+
+
 
 
 
@@ -99,7 +106,6 @@ def hook_instruction(uc,address,size,user_data):
 
 
 
-uc.hook_add(UC_HOOK_INSN,hook_syscall,arg1=UC_X86_INS_SYSCALL)
 uc.hook_add(UC_HOOK_MEM_READ_INVALID,hook_mem_read_invalid)
 uc.hook_add(UC_HOOK_CODE,hook_instruction)
 
@@ -113,6 +119,8 @@ FILENAME = "sample"
 POSIX_MEMALIGN = 0xf7da4aa0
 MALLOC=0xf7fed4d0
 WRITEV=0x565695d6
+SHUTDOWN=0x56569896
+EPOLL_WAIT=0xf7e225d0
 
 with open(FILENAME,"rb") as f:
     request = f.read()
