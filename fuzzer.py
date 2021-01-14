@@ -6,7 +6,7 @@ from unicorn import *
 from unicorn.x86_const import *
 import unicorn_loader
 
-from addresses import libc
+from got import *
 
 ins = 0
 
@@ -41,7 +41,7 @@ def hook_mem_read_invalid(uc,access,address,size,value,user_data):
 def hook_instruction(uc,address,size,user_data):
     global uc_heap
     if address in libc:
-        print(libc[address])
+        print("call "+libc[address])
         ret = struct.unpack("<I",uc.mem_read(uc.reg_read(UC_X86_REG_ESP) , 4))[0]
         returns.update({ret : libc[address]})
     elif address in returns:
@@ -49,13 +49,13 @@ def hook_instruction(uc,address,size,user_data):
         returns.pop(address)
     if uc.mem_read(address,2) == bytearray(b'\xcd\x80'):
         print("syscall at "+hex(address))
-    if address == MALLOC:
+    if address == functions["malloc"]:
         hsize = struct.unpack("<I", uc.mem_read(uc.reg_read(UC_X86_REG_ESP) + 4, 4))[0]
         retval = uc_heap.malloc(hsize)
         uc.reg_write(UC_X86_REG_EAX, retval)
         uc.reg_write(UC_X86_REG_EIP, struct.unpack("<I", uc.mem_read(uc.reg_read(UC_X86_REG_ESP), 4))[0])
         uc.reg_write(UC_X86_REG_ESP, uc.reg_read(UC_X86_REG_ESP) + 4)
-    elif address == POSIX_MEMALIGN:
+    elif address == functions["posix_memalign"]:
         memptr = struct.unpack("<I",uc.mem_read(uc.reg_read(UC_X86_REG_ESP) + 4,4))[0]
         alignment = struct.unpack("<I",uc.mem_read(uc.reg_read(UC_X86_REG_ESP) + 8,4))[0]
         hsize = struct.unpack("<I",uc.mem_read(uc.reg_read(UC_X86_REG_ESP) + 12,4))[0]
@@ -71,7 +71,7 @@ def hook_instruction(uc,address,size,user_data):
         else:
             print("something in posix_memalign went wrong")
             exit(0)
-    elif address == WRITEV:
+    elif address == functions["writev"]:
         esp = uc.reg_read(UC_X86_REG_ESP)
         fd = struct.unpack("<I",uc.mem_read(esp + 4,4))[0]
         iov = struct.unpack("<I",uc.mem_read(esp + 8,4))[0]
@@ -83,12 +83,12 @@ def hook_instruction(uc,address,size,user_data):
         uc.reg_write(UC_X86_REG_EAX,iovcnt*datalen)
         uc.reg_write(UC_X86_REG_EIP,struct.unpack("<I",uc.mem_read(esp,4))[0])
         uc.reg_write(UC_X86_REG_ESP,esp+4)
-    elif address == SHUTDOWN:
+    elif address == functions["shutdown"]:
         esp = uc.reg_read(UC_X86_REG_ESP)
         print("shutdown "+str(struct.unpack("<I",uc.mem_read(esp + 4,4))[0]))
         uc.reg_write(UC_X86_REG_EIP,struct.unpack("<I",uc.mem_read(esp,4))[0])
         uc.reg_write(UC_X86_REG_ESP,esp+4)
-    elif address == EPOLL_WAIT:
+    elif address == functions["epoll_wait"]:
         esp = uc.reg_read(UC_X86_REG_ESP)
         print("wait on "+str(struct.unpack("<I",uc.mem_read(esp + 4,4))[0]))
         uc.reg_write(UC_X86_REG_EIP,struct.unpack("<I",uc.mem_read(esp,4))[0])

@@ -1,9 +1,12 @@
+GET / HTTP/1.1
+Host: 192.168.178.26
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Accept-Language: de,en-US;q=0.7,en;q=0.3
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
-Connection: keep-alive
+Connection: close
 Upgrade-Insecure-Requests: 1
-If-Modified-Since: Wed, 23 Dec 2020 16:24:14 GMT
-If-None-Match: "5fe36f2e-6d"
+If-Modified-Since: Wed, 09 Dec 2020 17:03:34 GMT
+If-None-Match: "5fd10366-41"
 Cache-Control: max-age=0
+
