@@ -109,6 +109,13 @@ def hook_instruction(uc,address,size,user_data):
         print("calling __xstat64 with "+str(ver)+" on "+str(path))
         uc.reg_write(UC_X86_REG_EIP,struct.unpack("<I",uc.mem_read(esp,4))[0])
         uc.reg_write(UC_X86_REG_ESP,esp+4)
+    elif address == functions["__fxstat64"]:
+        esp = uc.reg_read(UC_X86_REG_ESP)
+        ver = struct.unpack("<I",uc.mem_read(esp + 4,4))[0]
+        fd = struct.unpack("<I",uc.mem_read(esp+8,4))[0]
+        print("calling __fxstat64 with "+str(ver)+" on "+str(fd))
+        uc.reg_write(UC_X86_REG_EIP,struct.unpack("<I",uc.mem_read(esp,4))[0])
+        uc.reg_write(UC_X86_REG_ESP,esp+4)
     elif address == functions["open64"]:
         esp = uc.reg_read(UC_X86_REG_ESP)
         path_addr = struct.unpack("<I",uc.mem_read(esp+4,4))[0]
@@ -124,6 +131,7 @@ def hook_instruction(uc,address,size,user_data):
         global fd_high
         global fd_global
         fd_high += 1
+        print("opening "+str(path)+" to fd "+str(fd_high))
         if flags | 1:
             fd_global.update({fd_high: open(path,"wb")})
         elif flags | 2:
@@ -135,6 +143,26 @@ def hook_instruction(uc,address,size,user_data):
         uc.reg_write(UC_X86_REG_EAX,fd_high)
         uc.reg_write(UC_X86_REG_EIP,struct.unpack("<I",uc.mem_read(esp,4))[0])
         uc.reg_write(UC_X86_REG_ESP,esp+4)
+    elif address == functions["fcntl64"]:
+        # Herausfinden was die cmds bedeuten etc.
+        esp = uc.reg_read(UC_X86_REG_ESP)
+        fd = struct.unpack("<I",uc.mem_read(esp+4,4))[0]
+        cmd = struct.unpack("<I",uc.mem_read(esp+8,4))[0]
+        print("fcntl on "+str(fd)+" with cmd "+str(cmd))
+        uc.reg_write(UC_X86_REG_EIP,struct.unpack("<I",uc.mem_read(esp,4))[0])
+        uc.reg_write(UC_X86_REG_ESP,esp+4)
+    elif address == functions["write"]:
+        esp = uc.reg_read(UC_X86_REG_ESP)
+        fd = struct.unpack("<I",uc.mem_read(esp+4,4))[0]
+        buf = struct.unpack("<I",uc.mem_read(esp+8,4))[0]
+        count = struct.unpack("<I",uc.mem_read(esp+12,4))[0]
+        writen = uc.mem_read(buf,count)
+        print("write into "+str(fd))
+        print(writen)
+        uc.reg_write(UC_X86_REG_EAX,count)
+        uc.reg_write(UC_X86_REG_EIP,struct.unpack("<I",uc.mem_read(esp,4))[0])
+        uc.reg_write(UC_X86_REG_ESP,esp+4)
+
 
             
         
