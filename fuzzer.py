@@ -25,6 +25,8 @@ breaks = {
 }
 
 returns = {}
+fd_global = {}
+fd_high = 10
 
 uc = unicorn_loader.AflUnicornEngine("MemoryDump",debug_print=False)
 uc_heap = unicorn_loader.UnicornSimpleHeap(uc, debug_print=True)
@@ -93,6 +95,52 @@ def hook_instruction(uc,address,size,user_data):
         print("wait on "+str(struct.unpack("<I",uc.mem_read(esp + 4,4))[0]))
         uc.reg_write(UC_X86_REG_EIP,struct.unpack("<I",uc.mem_read(esp,4))[0])
         uc.reg_write(UC_X86_REG_ESP,esp+4)
+    elif address == functions["__xstat64"]:
+        esp = uc.reg_read(UC_X86_REG_ESP)
+        ver = struct.unpack("<I",uc.mem_read(esp + 4,4))[0]
+        path_addr = struct.unpack("<I",uc.mem_read(esp + 8,4))[0]
+        path = ""
+        c = struct.unpack("B",uc.mem_read(path_addr,1))[0]
+        path_addr += 1
+        while c != 0:
+            path += chr(c)
+            c = struct.unpack("B",uc.mem_read(path_addr,1))[0]
+            path_addr += 1
+        print("calling __xstat64 with "+str(ver)+" on "+str(path))
+        uc.reg_write(UC_X86_REG_EIP,struct.unpack("<I",uc.mem_read(esp,4))[0])
+        uc.reg_write(UC_X86_REG_ESP,esp+4)
+    elif address == functions["open64"]:
+        esp = uc.reg_read(UC_X86_REG_ESP)
+        path_addr = struct.unpack("<I",uc.mem_read(esp+4,4))[0]
+        path = ""
+        c = struct.unpack("B",uc.mem_read(path_addr,1))[0]
+        path_addr += 1
+        while c != 0:
+            path += chr(c)
+            c = struct.unpack("B",uc.mem_read(path_addr,1))[0]
+            path_addr += 1
+        flags = struct.unpack("<I",uc.mem_read(esp+8,4))[0]
+        print("calling open on "+str(path)+" with "+str(flags)+" as flags")
+        global fd_high
+        global fd_global
+        fd_high += 1
+        if flags | 1:
+            fd_global.update({fd_high: open(path,"wb")})
+        elif flags | 2:
+            fd_global.update({fd_high: open(path,"rwb")})
+        elif flags | 1024:
+            fd_global.update({fd_high: open(path,"ab")})
+        else:
+            fd_global.update({fd_high: open(path,"r")})
+        uc.reg_write(UC_X86_REG_EAX,fd_high)
+        uc.reg_write(UC_X86_REG_EIP,struct.unpack("<I",uc.mem_read(esp,4))[0])
+        uc.reg_write(UC_X86_REG_ESP,esp+4)
+
+            
+        
+
+
+
 
 
 
