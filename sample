@@ -6,7 +6,4 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
 Connection: close
 Upgrade-Insecure-Requests: 1
-If-Modified-Since: Wed, 09 Dec 2020 17:03:34 GMT
-If-None-Match: "5fd10366-41"
-Cache-Control: max-age=0
 

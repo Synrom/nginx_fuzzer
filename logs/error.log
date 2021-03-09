@@ -1,0 +1,26 @@
+2021/03/04 16:05:14 [error] 5643#0: *1 open() "./html/favicon.ico" failed (2: No such file or directory), client: 192.168.178.26, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.178.26"
+2021/03/04 16:40:11 [emerg] 6647#0: setsid() failed (1: Operation not permitted)
+2021/03/04 16:42:03 [emerg] 6707#0: setsid() failed (1: Operation not permitted)
+2021/03/05 19:25:12 [emerg] 5267#0: bind() to 0.0.0.0:80 failed (13: Permission denied)
+2021/03/05 19:25:22 [emerg] 5272#0: bind() to 0.0.0.0:80 failed (13: Permission denied)
+2021/03/06 19:25:08 [error] 3657#0: *1 open() "./html/favicon.ico" failed (2: No such file or directory), client: 192.168.178.26, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.178.26"
+2021/03/08 16:55:21 [error] 3531#0: *1 open() "./html/favicon.ico" failed (2: No such file or directory), client: 192.168.178.26, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.178.26"
+2021/03/09 12:26:06 [error] 3274#0: *1 open() "./html/favicon.ico" failed (2: No such file or directory), client: 192.168.178.26, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.178.26"
+2021/03/09 12:45:30 [error] 3634#0: *1 open() "./html/favicon.ico" failed (2: No such file or directory), client: 192.168.178.26, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.178.26"
+2021/03/09 12:48:44 [error] 3703#0: *1 open() "./html/favicon.ico" failed (2: No such file or directory), client: 192.168.178.26, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.178.26"
+2021/03/09 13:01:21 [error] 3790#0: *1 open() "./html/favicon.ico" failed (2: No such file or directory), client: 192.168.178.26, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.178.26"
+2021/03/09 13:08:02 [error] 3971#0: *1 open() "./html/favicon.ico" failed (2: No such file or directory), client: 192.168.178.26, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.178.26"
+2021/03/09 13:08:36 [error] 4009#0: *1 open() "./html/favicon.ico" failed (2: No such file or directory), client: 192.168.178.26, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.178.26"
+2021/03/09 13:15:52 [error] 5424#0: *1 open() "./html/favicon.ico" failed (2: No such file or directory), client: 192.168.178.26, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.178.26"
+2021/03/09 14:36:15 [alert] 12086#0: *1 recv() failed (88: Socket operation on non-socket) while waiting for request, client: 192.168.178.26, server: 0.0.0.0:80
+2021/03/09 14:44:56 [alert] 12320#0: *1 recv() failed (88: Socket operation on non-socket) while waiting for request, client: 192.168.178.26, server: 0.0.0.0:80
+2021/03/09 14:47:44 [alert] 12348#0: *1 recv() failed (88: Socket operation on non-socket) while waiting for request, client: 192.168.178.26, server: 0.0.0.0:80
+2021/03/09 14:48:54 [alert] 12380#0: *1 recv() failed (9: Bad file descriptor) while waiting for request, client: 192.168.178.26, server: 0.0.0.0:80
+2021/03/09 14:49:14 [alert] 12397#0: *1 recv() failed (9: Bad file descriptor) while waiting for request, client: 192.168.178.26, server: 0.0.0.0:80
+2021/03/09 14:49:31 [alert] 12399#0: *1 recv() failed (9: Bad file descriptor) while waiting for request, client: 192.168.178.26, server: 0.0.0.0:80
+2021/03/09 14:50:20 [alert] 12413#0: *1 sendfile() failed (9: Bad file descriptor) while sending response to client, client: 192.168.178.26, server: localhost, request: "GET / HTTP/1.1", host: "192.168.178.26"
+2021/03/09 14:51:27 [alert] 12457#0: *1 sendfile() failed (9: Bad file descriptor) while sending response to client, client: 192.168.178.26, server: localhost, request: "GET / HTTP/1.1", host: "192.168.178.26"
+2021/03/09 14:58:39 [alert] 15350#0: *1 sendfile() failed (9: Bad file descriptor) while sending response to client, client: 192.168.178.26, server: localhost, request: "GET / HTTP/1.1", host: "192.168.178.26"
+2021/03/09 15:01:11 [alert] 16599#0: *1 sendfile() failed (9: Bad file descriptor) while sending response to client, client: 192.168.178.26, server: localhost, request: "GET / HTTP/1.1", host: "192.168.178.26"
+2021/03/09 15:06:31 [alert] 18007#0: *1 sendfile() failed (22: Invalid argument) while sending response to client, client: 192.168.178.26, server: localhost, request: "GET / HTTP/1.1", host: "192.168.178.26"
+2021/03/09 15:06:52 [alert] 18009#0: *1 sendfile() failed (22: Invalid argument) while sending response to client, client: 192.168.178.26, server: localhost, request: "GET / HTTP/1.1", host: "192.168.178.26"
