@@ -1,0 +1,15 @@
+für accept()
+read.active = 0 -> wird zu 1
+
+für recv()
+read.active = 0 -> wird zu 1
+
+ngx_http_wait_request_handler
+ngx_event_accept
+1015
+
+accept keine veränderung , events = 1
+receiver keine Veränderung (maybe sockaddr) , events = 1
+
+fuzz_sample_fd
+

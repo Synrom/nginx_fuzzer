@@ -1,0 +1,7 @@
+ngx_epoll_process_events 
+src/event/modules/ngx_epoll_module.c:415
+src/event/modules/ngx_epoll_module.c:478
+:627
+:627
+wir haben epoll_wait, accept und setsockopt
+wir brauchen noch epoll_ctl, bind, listen, writev, recv, send
